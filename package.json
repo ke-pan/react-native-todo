@@ -1,0 +1,11 @@
+{
+  "name": "clear-RN",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "react-native": "^0.13.2"
+  }
+}
