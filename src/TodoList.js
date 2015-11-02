@@ -1,7 +1,7 @@
+var TodoItem = require('./TodoItem') 
 var React = require('react-native')
 var {
   ListView,
-  Text,
   StyleSheet
 } = React
 
@@ -13,7 +13,7 @@ module.exports = React.createClass({
   },
   renderTodo: function(todo) {
     return (
-      <Text style={styles.todoItem}>{todo}</Text>
+      <TodoItem todo={todo}/>
     )
   },
   render: function() {
@@ -28,15 +28,6 @@ module.exports = React.createClass({
 })
 
 var styles = StyleSheet.create({
-  todoItem: {
-    height: 58,
-    marginTop: 2,
-    paddingLeft: 5,
-    backgroundColor: 'red',
-    fontSize: 40,
-    alignItems: 'center',
-    color: 'white'
-  },
   todoList: {
     
   }
