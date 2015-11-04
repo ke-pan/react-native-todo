@@ -13,14 +13,15 @@ module.exports = React.createClass({
   },
   renderTodo: function(todo) {
     return (
-      <TodoItem todo={todo}/>
+      <TodoItem onDeleteTodo={this.props.onDeleteTodo} todo={todo}/>
     )
   },
   render: function() {
     return (
       <ListView
         dataSource={this.state.dataSource.cloneWithRows(this.props.todos)}
-        renderRow={this.renderTodo} 
+        renderRow={this.renderTodo}
+        scrollEnabled={false}
         style={styles.todoList}
       />
     )
